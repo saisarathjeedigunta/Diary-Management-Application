@@ -1,13 +1,13 @@
 {
     "builds": [{
-      "src": "dairy/wsgi.py",
+      "src": "manage.py",
       "use": "@vercel/python",
       "config": { "maxLambdaSize": "15mb", "runtime": "Python 3.11" }
     }],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "dairy/wsgi.py"
+        "dest": "manage.py"
       }
     ]
   }
