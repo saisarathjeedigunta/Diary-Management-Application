@@ -356,7 +356,7 @@ def otpViewPage(request):
             except Exception as e:
                 
                 print(f"An error occurred: {e}")
-                messages.error(request, 'An error occurred while processing your email check your internet connection. Please try again.')
+                messages.error(request, f"An error occurred while processing your email check your internet connection. Please try again. {e}")
                 return redirect('/otpreq/')
                 
 
