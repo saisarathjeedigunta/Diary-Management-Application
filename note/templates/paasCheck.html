@@ -83,7 +83,7 @@
         <div class="form-group">
             <label for="password">Enter Password</label>
             <input type="password" id="password" name="password" class="form-control" required>
-            <div id="passwordError" class="error">Password must be at least 8 characters long, contain uppercase, lowercase letters, and a digit.</div>
+            <div id="passwordError" class="error">Password must be at least 8 characters long, and a digit.</div>
         </div>
         <div class="form-group">
             <label for="confirmPassword">Confirm Password</label>
@@ -101,7 +101,7 @@
     const passwordError = document.getElementById('passwordError');
     const confirmPasswordError = document.getElementById('confirmPasswordError');
     const successMessage = document.getElementById('successMessage');
-    const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+    const passwordPattern = /^(?=.*\d)[a-zA-Z\d]{8,}$/;
 
     document.getElementById('passwordForm').addEventListener('submit', function(e) {
         let valid = true;
